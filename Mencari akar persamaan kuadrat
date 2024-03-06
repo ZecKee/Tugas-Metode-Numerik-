@@ -1,0 +1,19 @@
+import numpy as np
+
+while True:
+    a = float(input("Masukkan nilai variabel a: "))
+    b = float(input("Masukkan nilai variabel b: "))
+    c = float(input("Masukkan nilai variabel c: "))
+
+    d = b ** 2 - 4 * a * c
+    sqrt_d = np.sqrt(d) if d >= 0 else np.sqrt(abs(d)) * 1j
+    
+    root1 = (-b + sqrt_d) / (2*a)
+    root2 = (-b - sqrt_d) / (2*a)
+
+    print("Akar-akar persamaan yaitu:")
+    print(f"x1 = {root1} dan x2 = {root2}")
+
+    if input("Apakah kamu ingin melakukan perhitungan persamaan kuadrat lainnya? (yes/no): ").lower() != 'yes':
+        print("Keluar program...")
+        break
